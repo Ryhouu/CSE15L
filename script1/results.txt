@@ -1,8 +1,0 @@
-1,3c1,3
-< The current time is 18:38,
-< the weather is sunny,
-< and the password is 38e5fa34
----
-> The current time is 03:38,
-> the weather is hazy,
-> and the password is 64acbb57

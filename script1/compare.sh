@@ -48,15 +48,8 @@ function check_results {
     # the variable DIFF_RESULTS
     diff ${output1} ${output2} > ${DIFF_RESULTS}
 
-    read diff_res_str < ${DIFF_RESULTS}
-
     # TODO: Check if the file stored in DIFF_RESULTS contains any characters
-    # check if a string contains alphabets and numbers
-    if [[ ${diff_res_str} =~ [[:alnum:]] ]]; then
-        # echo "------- Results -------"
-        # cat ${DIFF_RESULTS} 
-        # echo "-----------------------"
-
+    if [ -s ${DIFF_RESULTS} ]; then
         echo "Outputs are not identical. :("
         echo "Check out ${DIFF_RESULTS} for more details" >&2
     else
