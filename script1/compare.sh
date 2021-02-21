@@ -51,7 +51,7 @@ function check_results {
     read diff_res_str < ${DIFF_RESULTS}
 
     # TODO: Check if the file stored in DIFF_RESULTS contains any characters
-    # check if a string contains only alphabets and numbers
+    # check if a string contains alphabets and numbers
     if [[ ${diff_res_str} =~ [[:alnum:]] ]]; then
         # echo "------- Results -------"
         # cat ${DIFF_RESULTS} 
