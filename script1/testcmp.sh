@@ -36,14 +36,25 @@ function test2 {
     done
 }
 
-function main {
-    if [ "$#" -ge 1 ]; then
-        "$1"
-    fi
+function test_script2 {
+    echo "Testing script2 ......"
 
-    if [ "$#" -ge 2 ]; then
-        "$2"
-    fi
+    prog="../script2/parallelograms.sh"
+    solprog="../script2/solparallelograms"
+    input_file1="../script2/input3-5.txt"
+    input_file2="../script2/input10.txt"
+    input_file3="../script2/input_1_21.txt"
+
+    ./compare.sh -i ${input_file1} ${prog} ${solprog}
+    ./compare.sh -i ${input_file2} ${prog} ${solprog}
+    ./compare.sh -i ${input_file3} ${prog} ${solprog}
+
+}
+
+function main {
+    for arg in "$@"; do
+        "$arg"
+    done
 }
 
 main "$@"
