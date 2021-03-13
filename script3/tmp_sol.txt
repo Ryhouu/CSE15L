@@ -4,34 +4,4 @@ The following books are available:
 1) Moby-Dick; or, The Whale by Herman Melville 
 2) Gadsby by Ernest Vincent Wright 
 3) Pride and Prejudice by Jane Austin 
-Which book from the above list would you like to proccess? "Moby-Dick; or, The Whale" found in library
-library/mobydick.txt has 22316 lines
-Processing the first 100 lines (.44%)
-
---Letter Count--
-A 102
-B 33
-C 63
-D 34
-E 166
-F 12
-G 26
-H 91
-I 56
-J 5
-K 16
-L 41
-M 25
-N 57
-O 81
-P 50
-Q 2
-R 99
-S 54
-T 130
-U 33
-V 8
-W 21
-X 1
-Y 23
-Z 1
+Which book from the above list would you like to proccess? Invalid book. Selection must be [1, 3]
