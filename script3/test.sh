@@ -17,14 +17,14 @@ function test_script3 {
 
     for i in {1..4}; do
         input="input_$i.txt"
-        echo "testing ""${LIST_FILES[$((i - 1))]}"
-        # if [ $i -ge 2 ] && [ $i -le 3 ]; then
-        #     rm -f "library/""${LIST_FILES[$((i - 1))]}"
-        # fi
+        echo "testing ${LIST_FILES[$((i - 1))]}"
+        if [ $i -ge 2 ] && [ $i -le 3 ]; then
+            rm -f "library/""${LIST_FILES[$((i - 1))]}"
+        fi
         ./${prog} < ${input} > ${MY_OUTPUT} 2> ${MY_ERR}
-        # if [ $i -ge 2 ] && [ $i -le 3 ]; then
-        #     rm -f "library/""${LIST_FILES[$((i - 1))]}"
-        # fi
+        if [ $i -ge 2 ] && [ $i -le 3 ]; then
+            rm -f "library/""${LIST_FILES[$((i - 1))]}"
+        fi
         ./${solprog} < ${input} > ${SOL_OUTPUT} 2> ${SOL_ERR}
         check_results "${MY_OUTPUT}" "${SOL_OUTPUT}"
     done
